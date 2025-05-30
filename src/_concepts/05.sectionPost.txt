@@ -1,0 +1,61 @@
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+import './App.css'
+import PostCard from './_components/PostCard' 
+import PostCardContainer from './_components/PostCardContainer'
+
+function App() {
+  return (
+    <>
+      <PostCardContainer
+        title='Mis productos favoritos' 
+        description='Estos son los productos que mas me gustan y que he comprado en el pasado'>
+        
+        <PostCard 
+        title= 'Tostadora' 
+        precio={50000} comprar 
+        description= 'Esta tostadora es la mas eficiente en realacion de precio y calidad...' 
+        like={10} 
+        src= 'https://electroluxar.vtexassets.com/arquivos/ids/162063/Toaster_ETS10_Perspective_Electrolux_Spainsh_1000x1000.png?v=637841640276870000'/>
+        
+        <PostCard 
+        title= 'Heladera' 
+        precio={900000} 
+        description= 'Esta heladera conserva muy bien los alimentos' 
+        like={20} 
+        src= 'srl'/>
+      
+      </PostCardContainer>
+    
+      <PostCardContainer 
+        title='Lo mas leído' 
+        description='Esta seccion es de lo mas leído'>
+        
+        <PostCard 
+        title= 'El faro tenebroso' 
+        precio={5000} 
+        description= 'Este faro en el siglo XVII...' 
+        like={30} 
+        src= 'https://picsum.photos/id/870/200/300?grayscale&blur=2' />
+        
+        <PostCard 
+        title= 'Automovil 2025 Honda' comprar 
+        precio={1700000} 
+        description= 'Este auto ultimo modelo' 
+        like={30} 
+        src= 'https://picsum.photos/id/870/200/300?grayscale&blur=2' />
+        
+        <PostCard 
+        title= 'Post 5' 
+        precio={5000} 
+        description= 'Descripcion del post' 
+        like={30} 
+        src= 'https://picsum.photos/id/870/200/300?grayscale&blur=2' />
+      
+      </PostCardContainer>
+    </>
+  )
+}
+
+export default App
