@@ -1,32 +1,31 @@
+*{
+  margin: 0 auto;
+}
+
 .container {
   display: flex;
+  width: auto;  
+  max-width: 100%;
+  padding: 1rem;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1px;
+  background-color: rgb(255, 252, 87);
 }
 
 .title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  color: #ffffff;
-  text-shadow: 5px 5px 9px rgba(238, 255, 3, 0.5);
-  padding: 5px;
+  color: #0f0101;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
 }
 
 .description {
-  font-size: 1rem;
-  color: #ffffff;
-  margin-bottom: 1rem;
-  text-align: center;
+  color: #0f0101;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 .postCardContainer {
   display: flex;
-  gap: 5px;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 5px;
+  align-self: start;
+  background-color: #f0f0f0;
 }

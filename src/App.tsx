@@ -20,14 +20,29 @@ type Response = {
     categorytitle: string;
     categorydescription: string;
     posts: Post[];
-  }
+  };
+  most_views2:{
+    categorytitle: string;
+    categorydescription: string;
+    posts: Post[];
+  };
+  most_views3:{
+    categorytitle: string;
+    categorydescription: string;
+    posts: Post[];
+  };
+  most_views4:{
+    categorytitle: string;
+    categorydescription: string;
+    posts: Post[];
+  };
 }
 
 
 const response: Response = {
   most_views: {
-    categorytitle: 'Mejor precio de la semana 🔥',
-    categorydescription: 'Estos son los posts con mejor precio de la semana, ¡no te los pierdas!',
+    categorytitle: 'Recomendados para ti💥💢💥!',
+    categorydescription: 'Estas son las mejores recomendaciones para vos!',
     posts: [
       {
         id: 1,
@@ -55,31 +70,211 @@ const response: Response = {
       {
         id: 4,
         title: 'Post 4',
-        description: 'Descripción del post 4',
-        precio: 10.599, 
+        precio: 0, // precio del post
+        description: 'Descripción del post 1',
         like: 10,
         src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
       },
       {
         id: 5,
         title: 'Post 5',
-        description: 'Descripción del post 5',
-        precio: 14.599, 
+        description: 'Descripción del post 2',
+        precio: 4.599, 
         src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
       },
       {
         id: 6,
         title: 'Post 6',
-        description: 'Descripción del post 6',
-        precio: 45.000, 
+        description: 'Descripción del post 3',
+        precio: 4.599,
         like: 50,
         src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
       },
       {
         id: 7,
         title: 'Post 7',
-        description: 'Descripción del post 7',
-        precio: 18.000, 
+        description: 'Descripción del post 3',
+        precio: 4.599,
+        like: 50,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+    ],
+  },
+  
+  most_views2: {
+    categorytitle: 'Ofertas de la semana 🏷️',
+    categorydescription: 'Estos son los posts menos vendidos de la semana!',
+    posts: [
+      {
+        id: 8,
+        title: 'Post 8',
+        precio: 0, // precio del post
+        description: 'Descripción del post 1',
+        like: 10,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 9,
+        title: 'Post 9',
+        description: 'Descripción del post 2',
+        precio: 4.599, 
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 10,
+        title: 'Post 10',
+        description: 'Descripción del post 3',
+        precio: 4.599,
+        like: 50,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 11,
+        title: 'Post 11',
+        description: 'Descripción del post 2',
+        precio: 4.599, 
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 12,
+        title: 'Post 12',
+        description: 'Descripción del post 3',
+        precio: 4.599,
+        like: 50,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 13,
+        title: 'Post 13',
+        description: 'Descripción del post 2',
+        precio: 4.599, 
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 14,
+        title: 'Post 14',
+        description: 'Descripción del post 3',
+        precio: 4.599,
+        like: 50,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+    ],
+  },
+  
+  most_views3: {
+    categorytitle: 'ENVIO RELAMPAGO 🚀',
+    categorydescription: 'Estos son los posts menos vendidos de la semana!',
+    posts: [
+      {
+        id: 15,
+        title: 'Post 15',
+        precio: 0, // precio del post
+        description: 'Descripción del post 1',
+        like: 10,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 16,
+        title: 'Post 16',
+        description: 'Descripción del post 2',
+        precio: 4.599, 
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 17,
+        title: 'Post 17',
+        description: 'Descripción del post 3',
+        precio: 4.599,
+        like: 50,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 18,
+        title: 'Post 18',
+        description: 'Descripción del post 2',
+        precio: 4.599, 
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 19,
+        title: 'Post 19',
+        description: 'Descripción del post 3',
+        precio: 4.599,
+        like: 50,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 20,
+        title: 'Post 20',
+        description: 'Descripción del post 2',
+        precio: 4.599, 
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 21,
+        title: 'Post 21',
+        description: 'Descripción del post 3',
+        precio: 4.599,
+        like: 50,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+    ],
+  },
+  
+  most_views4: {
+    categorytitle: 'ENVIO GRATIS 🚚',
+    categorydescription: 'Estos son los posts menos vendidos de la semana!',
+    posts: [
+      {
+        id: 22,
+        title: 'Post 22',
+        precio: 0, // precio del post
+        description: 'Descripción del post 1',
+        like: 10,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 23,
+        title: 'Post 23',
+        description: 'Descripción del post 2',
+        precio: 4.599, 
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 24,
+        title: 'Post 24',
+        description: 'Descripción del post 3',
+        precio: 4.599,
+        like: 50,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 25,
+        title: 'Post 25',
+        description: 'Descripción del post 2',
+        precio: 4.599, 
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 26,
+        title: 'Post 26',
+        description: 'Descripción del post 3',
+        precio: 4.599,
+        like: 50,
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 27,
+        title: 'Post 27',
+        description: 'Descripción del post 2',
+        precio: 4.599, 
+        src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
+      },
+      {
+        id: 28,
+        title: 'Post 28',
+        description: 'Descripción del post 3',
+        precio: 4.599,
         like: 50,
         src: 'https://png.pngtree.com/background/20250124/original/pngtree-beautiful-natural-scenery-picture-image_15750499.jpg'
       },
@@ -90,7 +285,7 @@ const response: Response = {
 
 
 function App() {
-  const {most_views} = response;
+  const {most_views, most_views2, most_views3, most_views4} = response;
   return (
     <div>
       <PostCardContainer 
@@ -108,6 +303,60 @@ function App() {
               comprar={post.precio > 0} // si el precio es mayor a 0, se puede comprar
               src={post.src} 
               like={post.like} // opcional, puede no estar presente
+            />
+          )})} 
+          
+      </PostCardContainer>
+      
+      <PostCardContainer 
+        title= {most_views2.categorytitle}
+        description= {most_views2.categorydescription}>
+          {most_views2.posts.map((post) =>  { 
+          return (
+            <PostCard
+              key={post.id}
+              title={post.title} 
+              description={post.description}
+              precio={post.precio} 
+              comprar={post.precio > 0} 
+              src={post.src} 
+              like={post.like}
+            />
+          )})} 
+          
+      </PostCardContainer>
+      
+      <PostCardContainer 
+        title= {most_views3.categorytitle}
+        description= {most_views3.categorydescription}>
+          {most_views3.posts.map((post) =>  { 
+          return (
+            <PostCard
+              key={post.id}
+              title={post.title} 
+              description={post.description}
+              precio={post.precio}
+              comprar={post.precio > 0} 
+              src={post.src} 
+              like={post.like} 
+            />
+          )})} 
+          
+      </PostCardContainer>
+
+      <PostCardContainer 
+        title= {most_views4.categorytitle}
+        description= {most_views4.categorydescription}>
+          {most_views4.posts.map((post) =>  { 
+          return (
+            <PostCard
+              key={post.id}
+              title={post.title} 
+              description={post.description}
+              precio={post.precio} 
+              comprar={post.precio > 0} 
+              src={post.src} 
+              like={post.like} 
             />
           )})} 
           

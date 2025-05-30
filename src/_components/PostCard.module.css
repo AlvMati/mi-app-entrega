@@ -1,9 +1,8 @@
 .postCard {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    justify-content: space-between;
+    background-color: azure;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 5px;
@@ -14,8 +13,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 220px;
+    width:100%;
+    max-width: 90%;
+    height: 200px;
+    object-fit: cover;
     background-color: #25deff;
     border-radius: 8px;
 }
@@ -30,9 +31,11 @@
 }
 
 .description {
-    background-color: rgb(255, 244, 244);
+    background-color: #f9f9f9;
     color: #333;
     margin: 10px 0;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
     text-align: center;
     padding: 10px;
     border-radius: 5px;
@@ -40,8 +43,11 @@
 }
 
 .comprar {
-    background-color: rgb(245, 208, 245);
-    color: rgb(0, 0, 0);
+    background-color: #e0f7fa;
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    color: #00796b;
 }
 
 .precio {
@@ -49,7 +55,7 @@
     padding: 10px;
     font-size: 1.2rem;
     color: #00796b;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .like {
