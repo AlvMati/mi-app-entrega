@@ -4,13 +4,16 @@ type PostCardProps = {
   title: string;
   description: string;
   src: string;
-  like?: number; // "me gusta" count
-  precio: number; // price
+  like?: number;
+  precio: number; 
   comprar: boolean
+  isInCart?: boolean;
+  onToggleCart?: () => void;
 };
 
 function PostCard(props: PostCardProps) {
-    const { title, description, src, like, precio} = props; // destructuring props
+  const { title, description, src, like, precio, isInCart, onToggleCart} = props;
+
     return (
     <section>
       <article className={styles.postCard}>
@@ -20,6 +23,9 @@ function PostCard(props: PostCardProps) {
         <button className={styles.comprar}>
           {props.comprar ? 'Comprar' : 'Publicación Pausada'}
         </button> 
+        <button className={styles.cartButton} onClick={onToggleCart}>
+          {isInCart ? 'Quitar del carrito' : 'Agregar al carrito'}
+        </button>
         <p className={styles.precio}>${precio}</p>
         {(like!>0) && <p className={styles.like}>Le gusta a {like} personas</p>}
       </article>

@@ -1,0 +1,73 @@
+*{
+  margin: 0 auto;
+}
+
+.sectionContainer{
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.searchInput {
+  flex-grow: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.searchButton {
+  padding: 10px 15px;
+  background-color: #ffffff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background-color: #edf0df;
+}
+
+
+@media (max-width: 768px) {
+  .sectionContainer {
+    width: 90%;
+  }
+}
+
+.navList{
+  display: flex;
+  width: 0 auto; 
+  height: 50px; 
+  max-width: 100%;
+  padding: 1rem;
+  background-color: rgba(235, 219, 0, 0.938);
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navItem{
+  background-color: rgba(235, 219, 0, 0.938);
+  list-style: none;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.navItem:hover{
+  background-color: rgba(235, 219, 0, 0.7);
+}
+
+.navCarrito{
+  background-color: #00e1ff;
+  list-style: none;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  color: #000000;
+}

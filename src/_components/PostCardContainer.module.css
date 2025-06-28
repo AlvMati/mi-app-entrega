@@ -4,21 +4,20 @@
 
 .container {
   display: flex;
-  width: auto;  
-  max-width: 100%;
-  padding: 1rem;
+  width: 1440px;  
+  padding: 0 20px;
   flex-direction: column;
-  background-color: rgb(255, 252, 87);
+  background-color: rgb(0, 0, 0);
 }
 
 .title {
-  color: #0f0101;
+  color: #ffffff;
   font-family: 'Times New Roman', Times, serif;
   font-size: 30px;
 }
 
 .description {
-  color: #0f0101;
+  color: #ffffff;
   font-family: 'Times New Roman', Times, serif;
   font-size: 18px;
   margin-top: 10px;
