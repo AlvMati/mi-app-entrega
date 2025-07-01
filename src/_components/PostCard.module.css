@@ -1,75 +1,54 @@
 .postCard {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: azure;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin: 5px;
-    padding: 5px;
+  min-width: 200px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  transition: background-color 0.2s ease;
+}
+
+.postCard:hover .title{
+    color: #3483fa;
 }
 
 .img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:100%;
-    max-width: 90%;
-    height: 200px;
-    object-fit: cover;
-    background-color: #25deff;
-    border-radius: 8px;
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 8px;
 }
 
 .title {
-    background-color: #f0f0f0;
-    padding: 10px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 4px 0;
+  color: #333;
+  height: 38px; /* Limita a 2 líneas aprox */
+  overflow: hidden;
 }
 
-.description {
-    background-color: #f9f9f9;
-    color: #333;
-    margin: 10px 0;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    text-align: center;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.comprar {
-    background-color: #e0f7fa;
-    padding: 10px;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    color: #00796b;
-}
-.cartButton{
-    background-color: #e0f7fa;
-    padding: 10px;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    color: #00796b;
-    cursor: pointer;
-    text-align: center;
+.precioAnterior {
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+  margin: 4px 0 0 0;
 }
 
 .precio {
-    background-color: #e0f7fa;
-    padding: 10px;
-    font-size: 1.2rem;
-    color: #00796b;
-    border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin: 2px 0;
 }
 
-.like {
-    display: flex;
-    align-items: center;
-    margin-top: 10px;
-    color: #00796b;
+.descuento {
+  color: #00a650;
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.cuotas,
+.envio {
+  font-size: 12px;
+  color: #00a650;
+  margin: 1px 0;
 }

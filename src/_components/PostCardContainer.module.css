@@ -4,27 +4,33 @@
 
 .container {
   display: flex;
+  font-family: 'Roboto', sans-serif;
   width: 1440px;  
   padding: 0 20px;
+  border-radius: 20px;
   flex-direction: column;
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
 }
 
 .title {
-  color: #ffffff;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 30px;
+  color: #000000;
+  font-size: 20px;
 }
 
 .description {
-  color: #ffffff;
-  font-family: 'Times New Roman', Times, serif;
-  font-size: 18px;
+  color: #000000;
+  font-size: 15px;
   margin-top: 10px;
 }
 
 .postCardContainer {
   display: flex;
-  align-self: start;
-  background-color: #f0f0f0;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 8px 0;
+}
+
+.postCardContainer::-webkit-scrollbar {
+  display: none; /* Oculta barra de scroll en Chrome */
 }

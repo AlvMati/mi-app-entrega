@@ -1,19 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 *{
   margin: 0 auto;
 }
 
 .sectionContainer{
+  background-color: rgba(255, 238, 0, 0.938);
+}
+
+.busquedaContainer {
   display: flex;
   align-items: center;
+  width: 800px;
+  height: 10%;
   padding: 10px;
-  width: 500px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
   overflow: hidden;
 }
 
 .searchInput {
   flex-grow: 1;
+  font-family: 'Roboto', sans-serif;
+  height: 40px;
   padding: 10px;
   border: none;
   outline: none;
@@ -22,40 +29,56 @@
 
 .searchButton {
   padding: 10px 15px;
+  height: 60px;
+  align-items: center;
   background-color: #ffffff;
-  color: white;
+  color: rgb(196, 196, 196);
+  font-size: 20px;
   border: none;
   cursor: pointer;
 }
 
 .searchButton:hover {
-  background-color: #edf0df;
+  background-color: #fdfff6;
 }
 
-
-@media (max-width: 768px) {
-  .sectionContainer {
-    width: 90%;
-  }
+.header{
+background-color: rgba(255, 238, 0, 0.938);
+  padding: 10px 20px;
 }
 
-.navList{
+.navContainer{
   display: flex;
-  width: 0 auto; 
-  height: 50px; 
-  max-width: 100%;
-  padding: 1rem;
-  background-color: rgba(235, 219, 0, 0.938);
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.logoContainer{
+  width: 20%; /* Espacio izquierdo reservado */
+}
+.navListCenter{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+}
+
+.navListRight{
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .navItem{
-  background-color: rgba(235, 219, 0, 0.938);
   list-style: none;
-  padding: 10px;
-  font-weight: bold;
-  font-size: 1.2rem;
+  padding: 20px;
+  font-size: 1rem;
   color: #000000;
 }
 
@@ -63,11 +86,14 @@
   background-color: rgba(235, 219, 0, 0.7);
 }
 
+.navCarrito:hover{
+  background-color: rgba(235, 219, 0, 0.7);
+}
+
 .navCarrito{
-  background-color: #00e1ff;
-  list-style: none;
-  padding: 10px;
-  font-size: 1.2rem;
-  border-radius: 10px;
-  color: #000000;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
 }
