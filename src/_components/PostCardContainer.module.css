@@ -4,24 +4,27 @@
 
 .container {
   display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   font-family: 'Roboto', sans-serif;
-  width: 1440px;  
+  margin: 0 auto;
+  width: 100%;  
+  max-width: 1440px;
   padding: 0 20px;
   border-radius: 20px;
-  flex-direction: column;
   background-color: rgb(255, 255, 255);
 }
 
 .title {
+  text-align: left;
+  padding-left: 8px;
+  align-self: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
   color: #000000;
   font-size: 20px;
 }
 
-.description {
-  color: #000000;
-  font-size: 15px;
-  margin-top: 10px;
-}
 
 .postCardContainer {
   display: flex;
@@ -29,8 +32,4 @@
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   padding: 8px 0;
-}
-
-.postCardContainer::-webkit-scrollbar {
-  display: none; /* Oculta barra de scroll en Chrome */
 }

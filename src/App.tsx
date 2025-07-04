@@ -145,7 +145,7 @@ const response: Response = {
         id: 12,
         src: './../public/208.webp',
         title: 'Peugeot 208 1.6 Allure Pack',
-        precio: 22.000,
+        precio: 999.999,
         // description: 'Peugeot 208 1.6 Allure Pack',
       },
       {
@@ -208,7 +208,7 @@ const response: Response = {
         id: 20,
         src: './../public/sobretodo.webp',
         title: 'Sobretodo Simón De La Costa Abrigo...',
-        precio: 4.599, 
+        precio: 44.599, 
         // description: 'Sobretodo Simón De La Costa Abrigo...',
       },
       {
@@ -324,8 +324,7 @@ function App() {
       
       {filteredMostViews.length > 0 && (
       <PostCardContainer 
-        title= {most_views.categorytitle}
-        description= {most_views.categorydescription}>
+        title= {most_views.categorytitle}>
           {filteredMostViews.map((post) =>  { 
           return (
               <PostCard
@@ -347,8 +346,7 @@ function App() {
       
       {filteredMostViews2.length > 0 && (
       <PostCardContainer 
-        title= {most_views2.categorytitle}
-        description= {most_views2.categorydescription}>
+        title= {most_views2.categorytitle}>
           {filteredMostViews2.map((post) =>  { 
           return (
             <PostCard
@@ -368,8 +366,7 @@ function App() {
       
       {filteredMostViews3.length > 0 && (
       <PostCardContainer 
-        title= {most_views3.categorytitle}
-        description= {most_views3.categorydescription}>
+        title= {most_views3.categorytitle}>
           {filteredMostViews3.map((post) =>  { 
           return (
             <PostCard
@@ -389,8 +386,7 @@ function App() {
       
       {filteredMostViews4.length > 0 && (
       <PostCardContainer 
-        title= {most_views4.categorytitle}
-        description= {most_views4.categorydescription}>
+        title= {most_views4.categorytitle}>
           {filteredMostViews4.map((post) =>  { 
           return (
             <PostCard
