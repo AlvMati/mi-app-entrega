@@ -1,16 +1,17 @@
-import PostCard from './_components/PostCard' 
-import PostCardContainer from './_components/PostCardContainer'
+import PostCard from '../_components/PostCard' 
+import PostCardContainer from '../_components/PostCardContainer'
 import { useState } from 'react';
-import { Header , Busqueda } from './_components/header';
+import { Header , Busqueda } from '../_components/header';
 
 type Post = {
   id: number;
   title: string;
-  // description: string;
+  description: string;
   src: string;
   precio: number;
   precioAnterior?: number;
   descuento?: number;
+  
 }
 
 
@@ -46,65 +47,65 @@ const response: Response = {
       {
         id: 1,
         src: './../public/currenReloj.webp',
-        title: 'Relojes Hombre Deportivos CURREN...',
+        title: 'Reloj Hombre CURREN',
         precioAnterior: 79.993,
         precio: 69.993,
         descuento: 12,
-        // description: 'Relojes Hombre Deportivos CURREN...',
+        description: 'Relojes Hombre Deportivos CURREN...',
       },
       {
         id: 2,
         src: './../public/talagro.webp',
-        title: 'Taladro Atornillados Inalambrico Dewalt...',
+        title: 'Taladro Dewalt',
         precioAnterior: 399.999,
         precio: 389.514, 
         descuento: 3,
-        // description: 'Taladro Atornillados Inalambrico Dewalt...',
+        description: 'Taladro Atornillados Inalambrico Dewalt...',
       },
       {
         id: 3,
         src: './../public/vasser.webp',
-        title: 'Bomba de Agua Presurizada Vasser 1.5HP...',
+        title: 'Bomba de Agua Vasser 1.5HP',
         precioAnterior: 49.885,
         precio: 39.885,
         descuento: 20,
-        // description: 'Bomba de Agua Presurizada Vasser 1.5HP...',
+        description: 'Bomba de Agua Presurizada Vasser 1.5HP...',
       },
       {
         id: 4,
         src: './../public/Unnic.webp',
-        title: 'Cafetera Unnic Espresso Automática...',
+        title: 'Cafetera Unnic',
         precioAnterior: 429.999,
         precio: 409.999,
         descuento: 5,
-        // description: 'Cafetera Unnic Espresso Automática...',
+        description: 'Cafetera Unnic Espresso Automática...',
       },
       {
         id: 5,
         src: './../public/NBX.webp',
-        title: 'Monitor Gamer 27 Nbx 180hz 1ms...',
+        title: 'Monitor Gamer 27',
         precioAnterior: 249.999,
         precio: 219.099, 
         descuento: 12,
-        // description: 'Monitor Gamer 27 Nbx 180hz 1ms...',
+        description: 'Monitor Gamer 27 Nbx 180hz 1ms...',
       },
       {
         id: 6,
         src: './../public/NESCAFÉ.webp',
-        title: 'Cafetera Multibebida Dolce Gusto Piccolo XS...',
+        title: 'Cafetera Dolce',
         precioAnterior: 249.999,
         precio: 219.099,
         descuento: 12,
-        // description: 'Cafetera Multibebida Dolce Gusto Piccolo XS...',
+        description: 'Cafetera Multibebida Dolce Gusto Piccolo XS...',
       },
       {
         id: 7,
         src: './../public/Smart.webp',
-        title: 'Smart Tv Un55du7000gczb Du7000 55" Crystal Negro...',
+        title: 'Smart Tv 55"',
         precioAnterior: 399.999,
         precio: 344.599,
         descuento: 9,
-        // description: 'Smart Tv Un55du7000gczb Du7000 55" Crystal Negro...',
+        description: 'Smart Tv Un55du7000gczb Du7000 55" Crystal Negro...',
       },
     ],
   },
@@ -116,51 +117,58 @@ const response: Response = {
       {
         id: 8,
         src: './../public/topper.webp',
-        title: 'Botines De Futsal- Indoor Topper San Ciro',
-        precio: 59.999, // precio del post
-        // description: 'Botines De Futsal- Indoor Topper San Ciro',
+        title: 'Botines De Futsal',
+        precioAnterior: 71.999,
+        precio: 59.999,
+        description: 'Botines De Futsal- Indoor Topper San Ciro',
       },
       {
         id: 9,
         src: './../public/wilson.webp',
-        title: 'Mochila Wilson Porta Notebook Urbana...',
+        title: 'Mochila Wilson',
+        precioAnterior: 85.555,
         precio: 62.999, 
-        // description: 'Mochila Wilson Porta Notebook Urbana...',
+        description: 'Mochila Wilson Porta Notebook Urbana...',
       },
       {
         id: 10,
         src: './../public/zapatillas.webp',
-        title: 'Zapatillas de Fútbol, botines, reforzados...',
+        title: 'Zapatillas de Fútbol',
+        precioAnterior: 99.999,
         precio: 85.999,
-        // description: 'Zapatillas de Fútbol, botines, reforzados...',
+        description: 'Zapatillas de Fútbol, botines, reforzados...',
       },
       {
         id: 11,
         src: './../public/motul.webp',
-        title: 'Motul Aceite Para Motor 20w-50 Para moto',
+        title: 'Aceite Motul 20w-50',
+        precioAnterior: 19.999,
         precio: 15.555, 
-        // description: 'Aceite Para Motor Motul 20w-50 Para moto',
+        description: 'Aceite Para Motor Motul 20w-50 Para moto',
       },
       {
         id: 12,
         src: './../public/208.webp',
-        title: 'Peugeot 208 1.6 Allure Pack',
+        title: 'Peugeot 208',
+        precioAnterior: 9999999,
         precio: 999.999,
-        // description: 'Peugeot 208 1.6 Allure Pack',
+        description: 'Peugeot 208 1.6 Allure Pack',
       },
       {
         id: 13,
         src: './../public/ns200.webp',
-        title: 'Bajaj Rouser 200 Ns Kit Transmision...',
+        title: 'Bajaj Rouser 200 Ns Kit Transmision',
+        precioAnterior: 119.999,
         precio: 107.053, 
-        // description: 'Bajaj Rouser 200 Ns Kit Transmision...',
+        description: 'Bajaj Rouser 200 Ns Kit Transmision...',
       },
       {
         id: 14,
         src: './../public/polera.webp',
-        title: 'Polera Hombre Brooksfield Cuello Alto Tejido Liso 4081b',
+        title: 'Polera Hombre',
+        precioAnterior: 99.999,
         precio: 89.999,
-        // description: 'Polera Hombre Brooksfield Cuello Alto Tejido Liso 4081b',
+        description: 'Polera Hombre Brooksfield Cuello Alto Tejido Liso 4081b',
       },
     ],
   },
@@ -172,51 +180,58 @@ const response: Response = {
       {
         id: 15,
         src: './../public/philco.webp',
-        title: 'Lavarropas Inverter Philco Carga Frontal 11Kg...',
-        precio: 749.999, // precio del post
-        // description: 'Lavarropas Inverter Philco Carga Frontal 11Kg...',
+        title: 'Lavarropas Philco',
+        precioAnterior: 899.999,
+        precio: 749.999, 
+        description: 'Lavarropas Inverter Philco Carga Frontal 11Kg...',
       },
       {
         id: 16,
         src: './../public/silla.webp',
-        title: 'Silla Gamer Ergonómica Reclinable Premium Para Pc...',
+        title: 'Silla Gamer',
+        precioAnterior: 199.999,
         precio: 179.999, 
-        // description: 'Silla Gamer Ergonómica Reclinable Premium Para Pc...',
+        description: 'Silla Gamer Ergonómica Reclinable Premium Para Pc...',
       },
       {
         id: 17,
         src: './../public/foos.webp',
-        title: 'Zapatillas John Foos Urbanas Unisex...',
+        title: 'Zapatillas John Foos',
+        precioAnterior: 59.999,
         precio: 48.931,
-        // description: 'Zapatillas John Foos Urbanas Unisex...',
+        description: 'Zapatillas John Foos Urbanas Unisex...',
       },
       {
         id: 18,
         src: './../public/proyector.webp',
-        title: 'Proyector Mini Chowa P8 Android WiFi 4K hD 720P...',
+        title: 'Proyector Mini Chowa',
+        precioAnterior: 199.999,
         precio: 155.999, 
-        // description: 'Proyector Mini Chowa P8 Android WiFi 4K hD 720P...',
+        description: 'Proyector Mini Chowa P8 Android WiFi 4K hD 720P...',
       },
       {
         id: 19,
         src: './../public/mochila.webp',
-        title: 'Mochilla Musette De Cuero Sintético...',
+        title: 'Mochilla Musette',
+        precioAnterior: 29.999,
         precio: 18.999,
-        // description: 'Mochilla Musette De Cuero Sintético...',
+        description: 'Mochilla Musette De Cuero Sintético...',
       },
       {
         id: 20,
         src: './../public/sobretodo.webp',
-        title: 'Sobretodo Simón De La Costa Abrigo...',
+        title: 'Sobretodo Abrigo',
+        precioAnterior: 59.999,
         precio: 44.599, 
-        // description: 'Sobretodo Simón De La Costa Abrigo...',
+        description: 'Sobretodo Simón De La Costa Abrigo...',
       },
       {
         id: 21,
         src: './../public/licu.webp',
-        title: 'Picadora 123 + licuadora 1 litro Moulinex color blanco',
-        precio: 4.599,
-        // description: 'Picadora 123 + licuadora 1 litro Moulinex color blanco',
+        title: 'Licuadora/ icadoara',
+        precioAnterior: 99.999,
+        precio: 89.999,
+        description: 'Picadora 123 + licuadora 1 litro Moulinex color blanco',
       },
     ],
   },
@@ -228,51 +243,58 @@ const response: Response = {
       {
         id: 22,
         src: './../public/heladera.webp',
-        title: 'Heladera Side By Side Philco No Frost 428l Negra',
-        precio: 999.399, // precio del post
-        // description: 'Heladera Side By Side Philco No Frost 428l Negra',
+        title: 'Heladera Philco No Frost 428l Negra',
+        precioAnterior: 9999999,
+        precio: 999.399, 
+        description: 'Heladera Side By Side Philco No Frost 428l Negra',
       },
       {
         id: 23,
         src: './../public/cocina.webp',
-        title: 'Cocina Electrolux 4 Hornallas Con Horno...',
-        precio: 4.599, 
-        // description: 'Cocina Electrolux 4 Hornallas Con Horno...',
+        title: 'Cocina Electrolux',
+        precioAnterior: 399.999,
+        precio: 359.999, 
+        description: 'Cocina Electrolux 4 Hornallas Con Horno...',
       },
       {
         id: 24,
         src: './../public/anafe.webp',
-        title: 'Anafe electrico cocina spica sp-1040 doble hornalla...',
+        title: 'Anafe electrico',
+        precioAnterior: 99.999,
         precio: 79.999,
-        // description: 'Anafe electrico cocina spica sp-1040 doble hornalla...',
+        description: 'Anafe electrico cocina spica sp-1040 doble hornalla...',
       },
       {
         id: 25,
         src: './../public/cocina2.webp',
-        title: 'Cocina Florencia De 4 Hornallas 56cm...',
+        title: 'Cocina Florencia',
+        precioAnterior: 399.999,
         precio: 350.000, 
-        // description: 'Cocina Florencia De 4 Hornallas 56cm...',
+        description: 'Cocina Florencia De 4 Hornallas 56cm...',
       },
       {
         id: 26,
         src: './../public/drean.webp',
-        title: 'Lavarropas Carga Frontal 6 Kg Blanco Drean Lfdr0606lb0',
+        title: 'Lavarropas Drean',
+        precioAnterior: 799.999,
         precio: 642.257,
-        // description: 'Lavarropas Carga Frontal 6 Kg Blanco Drean Lfdr0606lb0',
+        description: 'Lavarropas Carga Frontal 6 Kg Blanco Drean Lfdr0606lb0',
       },
       {
         id: 27,
         src: './../public/WHIRLPOOL.webp',
-        title: 'Lavarropas Whirlpool Carga Frontal 7 Kg 1200rpm Inverter Wnq70as Gris',
+        title: 'Lavarropas Whirlpool',
+        precioAnterior: 999.999,
         precio: 883.666, 
-        // description: 'Lavarropas Whirlpool Carga Frontal 7 Kg 1200rpm Inverter Wnq70as Gris',
+        description: 'Lavarropas Whirlpool Carga Frontal 7 Kg 1200rpm Inverter Wnq70as Gris',
       },
       {
         id: 28,
         src: './../public/s24.webp',
-        title: 'Samsung Galaxy S24 Fe 256gb 8gb 5g Blue',
+        title: 'Samsung Galaxy S24',
+        precioAnterior: 399.999,
         precio: 999.999,
-        // description: 'Samsung Galaxy S24 Fe 256gb 8gb 5g Blue',
+        description: 'Samsung Galaxy S24 Fe 256gb 8gb 5g Blue',
       },
     ],
   },
@@ -280,7 +302,7 @@ const response: Response = {
 
 
 
-function App() {
+function Posts() {
   
   const {most_views, most_views2, most_views3, most_views4} = response;
   const [cartItems, setCartItems] = useState<number[]>([]);
@@ -328,9 +350,8 @@ function App() {
           {filteredMostViews.map((post) =>  { 
           return (
               <PostCard
-                key={post.id}
+                id={post.id}
                 title={post.title} 
-                // description={post.description}
                 precioAnterior={post.precioAnterior}
                 precio={post.precio}
                 descuento={post.descuento}
@@ -350,9 +371,9 @@ function App() {
           {filteredMostViews2.map((post) =>  { 
           return (
             <PostCard
-              key={post.id}
+              id={post.id}
               title={post.title} 
-              // description={post.description}
+              precioAnterior={post.precioAnterior}
               precio={post.precio} 
               comprar={post.precio > 0} 
               src={post.src} 
@@ -370,9 +391,9 @@ function App() {
           {filteredMostViews3.map((post) =>  { 
           return (
             <PostCard
-              key={post.id}
+              id={post.id}
               title={post.title} 
-              // description={post.description}
+              precioAnterior={post.precioAnterior}
               precio={post.precio}
               comprar={post.precio > 0} 
               src={post.src} 
@@ -390,9 +411,9 @@ function App() {
           {filteredMostViews4.map((post) =>  { 
           return (
             <PostCard
-              key={post.id}
+              id={post.id}
               title={post.title} 
-              // description={post.description}
+              precioAnterior={post.precioAnterior}
               precio={post.precio} 
               comprar={post.precio > 0} 
               src={post.src} 
@@ -407,4 +428,11 @@ function App() {
     </div>
   )
 }
-export default App
+export default Posts
+
+export const allProducts = [
+  ...response.most_views.posts,
+  ...response.most_views2.posts,
+  ...response.most_views3.posts,
+  ...response.most_views4.posts,
+];
