@@ -6,7 +6,7 @@ type PostCardProps = {
   id?: number;
   // description: string;
   src: string;
-  comprar: boolean
+  color: string | string[];
   precio: number; 
   precioAnterior?: number;
   descuento?: number;
@@ -15,7 +15,7 @@ type PostCardProps = {
 };
 
 function PostCard(props: PostCardProps) {
-  const { id, title, src, precio, precioAnterior, descuento} = props;
+  const { id, title, src, precio, precioAnterior, descuento, color} = props;
 
     return (
     <section>
@@ -27,14 +27,12 @@ function PostCard(props: PostCardProps) {
             <p className={styles.precioAnterior}>${precioAnterior}</p>
           )}
           <p className={styles.precio}>${precio}</p>
+          <p className={styles.color}>Color: {color}</p>
           {descuento && (
           <p className={styles.descuento}>Descuento: {descuento}% OFF</p>)}
           <p className={styles.cuotas}>en 9 cuotas de ${Math.round(precio / 9)}</p>
           <p className={styles.envio}>Envío gratis</p>
         </Link>
-          {/* <button className={styles.cartButton} onClick={onToggleCart}>
-            {isInCart ? 'Quitar del carrito' : 'Agregar al carrito'}
-          </button> */}
       </article>
     </section>
   );

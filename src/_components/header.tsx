@@ -1,8 +1,9 @@
 import styles from './header.module.css';
-import { FiSearch } from 'react-icons/fi';     // ícono de búsqueda
+// import { FiSearch } from 'react-icons/fi';     // ícono de búsqueda
 import { FiShoppingCart } from 'react-icons/fi'; // ícono de carrito
 import { FiBell } from 'react-icons/fi';         // ícono de notificaciones
 import { Link } from 'react-router-dom';
+import { useCart } from '../context/CartContext.tsx'; // Importa el hook useCart
 
 
 type BusquedaProps = {
@@ -15,7 +16,7 @@ export function Busqueda({ searchTerm, onSearchChange }: BusquedaProps) {
         <section className={styles.sectionContainer}> 
             <div className={styles.busquedaContainer}>
                 <div className={styles.logoContainer}>
-                    <Link to="/posts">
+                    <Link to="/">
                     <img className={styles.logo} src='https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.7/mercadolibre/logo__large_plus.png' alt='Mercado Libre Logo' />
                     </Link>
                 </div>
@@ -36,21 +37,20 @@ export function Busqueda({ searchTerm, onSearchChange }: BusquedaProps) {
 }
             
 
-type HeaderProps = {
-    cartCount: number;
-};
-
-export function Header ({cartCount}: HeaderProps) {
+export function Header () {
+    const { cartItems } = useCart(); // Usa el hook useCart para acceder a los items del carrito
+    const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
     return(
         <header className={styles.header}>
             <nav className={styles.navContainer}>
                 <ul className={styles.navListCenter}> 
+                    <Link to="/posts"><li className={styles.navItem}>Inicio</li></Link>
                     <li className={styles.navItem}>CATEGORIAS</li>
                     <li className={styles.navItem}>OFERTAS</li>
                     <li className={styles.navItem}>CUPONES</li>
                     <li className={styles.navItem}>SUPERMERCADO</li>
                     <li className={styles.navItem}>MERCADO PLAY</li>
-                    <li className={styles.navItem}>VENDER</li>
+                    <Link to="/nuevo-producto" className={styles.navItem}>VENDER</Link>
                     <li className={styles.navItem}>AYUDA</li>
                 </ul>
                 <ul className={styles.navListRight}> 
@@ -58,7 +58,9 @@ export function Header ({cartCount}: HeaderProps) {
                     <Link to="/checkout" className={styles.navItem}>COMPRAS</Link>
                     <li className={styles.navItem}><FiBell /></li>
                     <Link to="/carrito" className={styles.navCarrito}>
-                        <FiShoppingCart/>{cartCount > 0 && (<span className={styles.contador}>{cartCount}</span>)}
+                        <FiShoppingCart/>{totalItems> 0 && (
+                            <span className={styles.contador}>{totalItems}</span>
+                        )}
                     </Link>
                 </ul>
             </nav>

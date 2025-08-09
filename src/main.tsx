@@ -10,22 +10,35 @@ import NotFound from './_pages/NotFound.tsx'
 import Layout from './_components/Layout.tsx';
 import Carrito from './_pages/Carrito.tsx';
 import Checkout from './_pages/Checkout.tsx';
+import {CartProvider} from './context/CartContext.tsx';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import NewProduct from './_pages/NewProduct';
 
-
+const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <BrowserRouter>
-            <Routes>
-                <Route index element={<Home />} />
-                <Route path="/posts" element={<Posts />} />
-                <Route path="/" element={<Layout />}>
-                    <Route path="/posts/:id" element={<PostDetail />} />
-                    <Route path="/carrito" element={<Carrito />} />
-                    <Route path="/checkout" element={<Checkout />} />
-                    <Route path="*" element={<NotFound /> } />
-                </Route>
-            </Routes>
-        </BrowserRouter>
+        <QueryClientProvider client={queryClient}>
+            <BrowserRouter>
+                <CartProvider>
+                    <Routes>
+                        <Route index element={<Home />} />
+                        <Route path="/posts" element={<Posts />} />
+                        <Route path="/" element={<Layout />}>
+                            <Route path="/posts/:id" element={<PostDetail />} />
+                            <Route path="/carrito" element={<Carrito />} />
+                            <Route path="/nuevo-producto" element={<NewProduct />} />
+                            <Route
+                                path="/checkout"
+                                element={
+                                    <Checkout />
+                                }
+                                />
+                            <Route path="*" element={<NotFound /> } />
+                        </Route>
+                    </Routes>
+                </CartProvider>
+            </BrowserRouter>
+        </QueryClientProvider>
     </StrictMode>
 );

@@ -23,7 +23,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Roboto', sans-serif;
 }
 
 .precio {
@@ -35,7 +34,8 @@
 
 .compra,
 .carrito {
-  padding: 12px;
+  font-family: 'Roboto', sans-serif;
+  padding: 12px 24px;
   margin: 6px 0;
   border: none;
   border-radius: 6px;
