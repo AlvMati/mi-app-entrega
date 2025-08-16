@@ -1,9 +1,8 @@
 import styles from './header.module.css';
-// import { FiSearch } from 'react-icons/fi';     // ícono de búsqueda
-import { FiShoppingCart } from 'react-icons/fi'; // ícono de carrito
-import { FiBell } from 'react-icons/fi';         // ícono de notificaciones
+import { FiShoppingCart } from 'react-icons/fi';
+import { FiBell } from 'react-icons/fi';         
 import { Link } from 'react-router-dom';
-import { useCart } from '../context/CartContext.tsx'; // Importa el hook useCart
+import { useCart } from '../context/CartContext.tsx'; 
 
 
 type BusquedaProps = {
@@ -26,8 +25,6 @@ export function Busqueda({ searchTerm, onSearchChange }: BusquedaProps) {
                 value={searchTerm}
                 onChange={onSearchChange}
                 />
-                    
-                {/* <button className={styles.searchButton}><FiSearch /></button> */}
                 <div className={styles.meli}>
                     <img className={styles.logo} src='https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/5.21.7/mercadolibre/logo__large_plus.png' alt='Mercado Libre Logo' />
                 </div>

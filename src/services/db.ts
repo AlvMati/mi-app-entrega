@@ -1,4 +1,3 @@
-// Mock product database
 import type { Product, Category } from './types';
 
 
@@ -23,6 +22,7 @@ let productsDB: Product[] = [
     },
     prime: true,
     inStock: true,
+    featured: true,
   },
   {
     id: 2,
@@ -43,6 +43,7 @@ let productsDB: Product[] = [
     },
     prime: true,
     inStock: true,
+    featured: true,
   },
   {
     id: 3,
@@ -61,6 +62,7 @@ let productsDB: Product[] = [
     },
     prime: true,
     inStock: true,
+    featured: true,
   },
   {
     id: 4,
@@ -81,6 +83,7 @@ let productsDB: Product[] = [
     },
     prime: true,
     inStock: true,
+    featured: true,
   },
   {
     id: 5,
@@ -98,6 +101,7 @@ let productsDB: Product[] = [
       count: 892,
     },
     inStock: true,
+    featured: false,
   },
   {
     id: 6,
@@ -117,6 +121,7 @@ let productsDB: Product[] = [
       count: 567,
     },
     inStock: true,
+    featured: false,
   },
   {
     id: 7,
@@ -134,6 +139,7 @@ let productsDB: Product[] = [
       count: 234,
     },
     inStock: true,
+    featured: false,
   },
   {
     id: 8,
@@ -154,6 +160,7 @@ let productsDB: Product[] = [
     },
     prime: true,
     inStock: true,
+    featured: false,
   },
   {
     id: 9,
@@ -173,6 +180,7 @@ let productsDB: Product[] = [
       count: 156,
     },
     inStock: true,
+    featured: false,
   },
   {
     id: 10,
@@ -190,6 +198,7 @@ let productsDB: Product[] = [
       count: 89,
     },
     inStock: true,
+    featured: false,
   },
   {
     id: 11,
@@ -209,6 +218,7 @@ let productsDB: Product[] = [
       count: 267,
     },
     inStock: true,
+    featured: true,
   },
   {
     id: 12,
@@ -229,6 +239,7 @@ let productsDB: Product[] = [
     },
     prime: true,
     inStock: true,
+    featured: false,
   },
   {
     id: 13,
@@ -247,6 +258,7 @@ let productsDB: Product[] = [
     },
     prime: true,
     inStock: true,
+    featured: false,
   },
   {
     id: 14,
@@ -266,6 +278,7 @@ let productsDB: Product[] = [
       count: 178,
     },
     inStock: true,
+    featured: false,
   },
   {
     id: 15,
@@ -286,6 +299,7 @@ let productsDB: Product[] = [
     },
     prime: true,
     inStock: true,
+    featured: false,
   },
   {
     id: 16,
@@ -306,6 +320,7 @@ let productsDB: Product[] = [
     },
     prime: true,
     inStock: true,
+    featured: true,
   },
   {
     id: 17,
@@ -325,6 +340,7 @@ let productsDB: Product[] = [
       count: 789,
     },
     inStock: true,
+    featured: false,
   },
   {
     id: 18,
@@ -345,6 +361,7 @@ let productsDB: Product[] = [
     },
     prime: true,
     inStock: true,
+    featured: false,
   },
 ];
 

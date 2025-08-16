@@ -13,32 +13,50 @@ import Checkout from './_pages/Checkout.tsx';
 import {CartProvider} from './context/CartContext.tsx';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import NewProduct from './_pages/NewProduct';
+import { AuthProvider } from './context/AuthContext.tsx';
+import PrivateRoute from "./_components/PrivateRoute.tsx";
+import Login from "./_pages/Login";
+import Register from "./_pages/Register";
 
 const queryClient = new QueryClient();
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <QueryClientProvider client={queryClient}>
-            <BrowserRouter>
-                <CartProvider>
-                    <Routes>
-                        <Route index element={<Home />} />
-                        <Route path="/posts" element={<Posts />} />
-                        <Route path="/" element={<Layout />}>
-                            <Route path="/posts/:id" element={<PostDetail />} />
-                            <Route path="/carrito" element={<Carrito />} />
-                            <Route path="/nuevo-producto" element={<NewProduct />} />
-                            <Route
-                                path="/checkout"
-                                element={
-                                    <Checkout />
-                                }
+        <AuthProvider>
+            <QueryClientProvider client={queryClient}>
+                <BrowserRouter>
+                    <CartProvider>
+                        <Routes>
+                            <Route index element={<Home />} />
+                            <Route path="/posts" element={<Posts />} />
+                            <Route path="/" element={<Layout />}>
+                                <Route path="/posts/:id" element={<PostDetail />} />
+                                <Route path="/carrito" element={ 
+                                    <PrivateRoute>
+                                        <Carrito />
+                                    </PrivateRoute>
+                                } 
                                 />
-                            <Route path="*" element={<NotFound /> } />
-                        </Route>
-                    </Routes>
-                </CartProvider>
-            </BrowserRouter>
-        </QueryClientProvider>
+                                <Route path="/nuevo-producto" element={
+                                    <PrivateRoute>
+                                        <NewProduct />
+                                    </PrivateRoute>} />
+                                <Route
+                                    path="/checkout"
+                                    element={
+                                        <PrivateRoute>
+                                            <Checkout />
+                                        </PrivateRoute>
+                                    }
+                                    />
+                                <Route path="*" element={<NotFound /> } />
+                                <Route path="/login" element={<Login />} />
+                                <Route path="/register" element={<Register />} />
+                            </Route>
+                        </Routes>
+                    </CartProvider>
+                </BrowserRouter>
+            </QueryClientProvider>
+        </AuthProvider>
     </StrictMode>
 );

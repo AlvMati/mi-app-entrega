@@ -16,6 +16,7 @@ export type Product = {
   };
   prime?: boolean;
   inStock?: boolean;
+  featured: boolean;
 };
 
 export type Category = {

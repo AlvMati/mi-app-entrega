@@ -4,7 +4,6 @@ import styles from './PostCard.module.css';
 type PostCardProps = {
   title: string;
   id?: number;
-  // description: string;
   src: string;
   color: string | string[];
   precio: number; 

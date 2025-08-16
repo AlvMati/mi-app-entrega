@@ -46,7 +46,6 @@ function PostDetail() {
           )}
         </div>
       </div>
-      <Link to="/posts">Atrás</Link>
     </div>
   );
 }
