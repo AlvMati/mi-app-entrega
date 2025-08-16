@@ -1,5 +1,5 @@
 import { productsDB, categories } from "./db";
-import type { Product, Filters, SortBy, Options } from "./types";
+import type { Product, SortBy, Options } from "./types";
 
 
 // Simula retardo en la llamada API

@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import Posts from "../_pages/Posts";
 
 type CartItem = {
   id: number;
