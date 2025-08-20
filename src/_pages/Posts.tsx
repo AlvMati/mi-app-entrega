@@ -1,4 +1,4 @@
-import { products } from '../data/products';
+import { products } from '../data/Products';
 import PostCard from '../_components/PostCard';
 import PostCardContainer from '../_components/PostCardContainer';
 import { useState } from 'react';

@@ -32,27 +32,30 @@ export function Busqueda({ searchTerm, onSearchChange }: BusquedaProps) {
         </section>
     )
 }
-            
+
 
 export function Header () {
-    const { cartItems } = useCart(); // Usa el hook useCart para acceder a los items del carrito
+    const { cartItems } = useCart(); 
     const totalItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+    const handleNotAvailable = (feature: string) => {
+    alert(`${feature} está en desarrollo`);
+    };
     return(
         <header className={styles.header}>
             <nav className={styles.navContainer}>
                 <ul className={styles.navListCenter}> 
                     <Link to="/posts"><li className={styles.navItem}>Inicio</li></Link>
-                    <li className={styles.navItem}>CATEGORIAS</li>
-                    <li className={styles.navItem}>OFERTAS</li>
-                    <li className={styles.navItem}>CUPONES</li>
-                    <li className={styles.navItem}>SUPERMERCADO</li>
-                    <li className={styles.navItem}>MERCADO PLAY</li>
-                    <Link to="/nuevo-producto" className={styles.navItem}>VENDER</Link>
-                    <li className={styles.navItem}>AYUDA</li>
+                    <button className={styles.navItem} onClick={() => handleNotAvailable("Categorías")}>Categorías</button>
+                    <button className={styles.navItem} onClick={() => handleNotAvailable("Ofertas")}>Ofertas</button>
+                    <button className={styles.navItem} onClick={() => handleNotAvailable("Cupones")}>Cupones</button>
+                    <button className={styles.navItem} onClick={() => handleNotAvailable("Supermercado")}>Supermercado</button>
+                    <button className={styles.navItem} onClick={() => handleNotAvailable("Mercado PLAY")}>Mercado PLAY</button>
+                    <Link to="/nuevo-producto" className={styles.navItem}>Vender</Link>
+                    <button className={styles.navItem} onClick={() => handleNotAvailable("Ayuda")}>Ayuda</button>
                 </ul>
                 <ul className={styles.navListRight}> 
-                    <li className={styles.navItem}>MI PERFIL</li>
-                    <Link to="/checkout" className={styles.navItem}>COMPRAS</Link>
+                    <button className={styles.navItem} onClick={() => handleNotAvailable("Perfil")}>Perfil</button>
+                    <Link to="/checkout" className={styles.navItem}>Compras</Link>
                     <li className={styles.navItem}><FiBell /></li>
                     <Link to="/carrito" className={styles.navCarrito}>
                         <FiShoppingCart/>{totalItems> 0 && (

@@ -49,6 +49,11 @@
   background-color: #fdfff6;
 }
 
+.logoContainer{
+  height: 30px;
+  margin-right: 12px;
+}
+
 .header{
   background-color: #ffe600;
   width: 100%;
@@ -63,17 +68,13 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.logoContainer{
-  height: 30px;
-  margin-right: 12px;
-}
+
 .navListCenter{
   display: flex;
   gap: 16px;
   list-style: none;
   margin: 0;
   padding: 0;
-
 }
 
 .navListRight{
@@ -85,10 +86,16 @@
 }
 
 .navItem{
-  list-style: none;
-  padding: 20px;
-  font-size: 1rem;
+  background-color: transparent; 
+  border: none; 
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s;
   color: #000000;
+  text-decoration: none; 
 }
 
 .navItem:hover{
@@ -97,6 +104,10 @@
 
 .navCarrito:hover{
   background-color: rgba(235, 219, 0, 0.7);
+}
+
+button:focus {
+  outline: none;
 }
 
 .navCarrito{
