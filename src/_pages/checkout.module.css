@@ -1,0 +1,108 @@
+
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 30px 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+}
+
+.h2 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+h3 {
+  font-weight: 600;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.productList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.productList li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+.productList li img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 20px;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 4px rgba(0,0,0,0.05);
+}
+
+.productList li span {
+  font-weight: 500;
+  color: #555;
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 25px;
+  font-weight: 600;
+}
+
+/* .button {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #00b894;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+} */
+button {
+  margin-top: 35px;
+  background-color: #3483fa;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #2968c8;
+}
+
+div > p, div > h2, div > h3 {
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin: 20px;
+    padding: 20px 15px;
+  }
+  
+  productList li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
+  button {
+    padding: 12px 15px;
+  }
+}
